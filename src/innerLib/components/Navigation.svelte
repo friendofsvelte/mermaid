@@ -51,7 +51,7 @@
 					Examples
 				</a>
 				<a
-					href="https://github.com/your-username/@friendofsvelte/mermaid"
+					href="https://github.com/friendofsvelte/mermaid"
 					target="_blank"
 					rel="noopener noreferrer"
 					class="text-gray-600 hover:text-gray-900 transition-colors"

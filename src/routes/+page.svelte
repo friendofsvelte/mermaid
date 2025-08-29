@@ -323,9 +323,9 @@
 				<div>
 					<h4 class="font-semibold mb-4">Community</h4>
 					<ul class="space-y-2 text-gray-400">
-						<li><a href="https://github.com/your-username/@friendofsvelte/mermaid" target="_blank" rel="noopener" class="hover:text-white transition-colors">GitHub</a></li>
-						<li><a href="https://github.com/your-username/@friendofsvelte/mermaid/issues" target="_blank" rel="noopener" class="hover:text-white transition-colors">Issues</a></li>
-						<li><a href="https://github.com/your-username/@friendofsvelte/mermaid/discussions" target="_blank" rel="noopener" class="hover:text-white transition-colors">Discussions</a></li>
+						<li>Built with ❤️ for Svelte</li>
+						<li>Open source & MIT licensed</li>
+						<li>Community driven development</li>
 					</ul>
 				</div>
 			</div>

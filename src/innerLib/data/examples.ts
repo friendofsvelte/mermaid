@@ -154,15 +154,6 @@ export const diagramExamples: DiagramExample[] = [
 
 export const hackTips = [
 	{
-		title: 'Performance Optimization',
-		description: 'Use dynamic imports to reduce bundle size and improve loading times',
-		code: `// ✅ Good: Dynamic import (already implemented)
-const mermaid = await import('mermaid');
-
-// ❌ Bad: Static import increases bundle size
-import mermaid from 'mermaid';`
-	},
-	{
 		title: 'Theme Customization',
 		description: 'Create custom themes for consistent branding',
 		code: `const customConfig: MermaidConfig = {
