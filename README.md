@@ -1,58 +1,190 @@
-# Svelte library
+# @friendofsvelte/mermaid
 
-Everything you need to build a Svelte library, powered by [`sv`](https://npmjs.com/package/sv).
+A powerful, type-safe Mermaid.js component for Svelte 5 with SSR support, custom themes, and responsive design.
 
-Read more about creating a library [in the docs](https://svelte.dev/docs/kit/packaging).
+[![npm version](https://badge.fury.io/js/@friendofsvelte%2Fmermaid.svg)](https://badge.fury.io/js/@friendofsvelte%2Fmermaid)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Creating a project
+## Features
 
-If you're seeing this, you've probably already done this step. Congrats!
+- ⚡ **Lightning Fast** - Dynamic imports and optimized rendering
+- 🎨 **Fully Customizable** - Complete theme control and configuration
+- 📱 **Responsive Ready** - Built-in responsive behavior
+- 🔒 **Type Safe** - Full TypeScript support with strict typing
+- 🧪 **Test Friendly** - E2E tested with Playwright
+- 🚀 **SSR Compatible** - Works with SvelteKit SSR and static generation
 
-```sh
-# create a new project in the current directory
-npx sv create
+## Installation
 
-# create a new project in my-app
-npx sv create my-app
+```bash
+npm install @friendofsvelte/mermaid
 ```
 
-## Developing
+## Quick Start
 
-Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
+```svelte
+<script>
+  import { Mermaid } from '@friendofsvelte/mermaid';
+  
+  const diagram = `graph TD
+    A[Start] --> B[Process]
+    B --> C[End]`;
+</script>
 
-```sh
+<Mermaid string={diagram} />
+```
+
+## Advanced Usage
+
+```svelte
+<script>
+  import { Mermaid } from '@friendofsvelte/mermaid';
+  import type { MermaidConfig } from '@friendofsvelte/mermaid';
+  
+  const config: MermaidConfig = {
+    theme: 'dark',
+    flowchart: {
+      useMaxWidth: true,
+      htmlLabels: true
+    }
+  };
+  
+  const diagram = `sequenceDiagram
+    participant A as Alice
+    participant B as Bob
+    A->>B: Hello Bob!
+    B-->>A: Hello Alice!`;
+</script>
+
+<Mermaid string={diagram} {config} />
+```
+
+## API Reference
+
+### Props
+
+| Prop | Type | Required | Description |
+|------|------|----------|-------------|
+| `string` | `string` | Yes | The Mermaid diagram definition string |
+| `config` | `MermaidConfig` | No | Mermaid configuration options |
+| `error` | `Snippet<[MermaidError]>` | No | Error display snippet |
+
+### Types
+
+```typescript
+interface MermaidConfig {
+  theme?: 'default' | 'dark' | 'forest' | 'neutral' | 'base';
+  flowchart?: {
+    useMaxWidth?: boolean;
+    htmlLabels?: boolean;
+    curve?: string;
+  };
+  sequence?: {
+    useMaxWidth?: boolean;
+    actorMargin?: number;
+  };
+  // ... and more
+}
+
+interface MermaidError {
+  message: string;
+  stack?: string;
+}
+```
+
+## Supported Diagram Types
+
+- **Flowcharts** - Process flows and decision trees
+- **Sequence Diagrams** - API interactions and workflows
+- **Gantt Charts** - Project timelines and scheduling
+- **User Journey Maps** - UX flows and customer experience
+- **Entity Relationship Diagrams** - Database schemas
+- **Git Graphs** - Version control workflows
+- **Pie Charts** - Data visualization
+- **Class Diagrams** - Object-oriented design
+
+## Examples
+
+### Custom Theme
+
+```svelte
+<script>
+  import { Mermaid } from '@friendofsvelte/mermaid';
+  
+  const customConfig = {
+    theme: 'base',
+    themeVariables: {
+      primaryColor: '#ff6b6b',
+      primaryTextColor: '#fff',
+      primaryBorderColor: '#ff5252',
+      lineColor: '#333'
+    }
+  };
+</script>
+
+<Mermaid string={diagram} config={customConfig} />
+```
+
+### Error Handling
+
+```svelte
+<script>
+  import { Mermaid } from '@friendofsvelte/mermaid';
+  
+  const invalidDiagram = `invalid syntax here`;
+</script>
+
+<Mermaid string={invalidDiagram}>
+  {#snippet error(errorObj)}
+    <div class="error-message">
+      <p>Failed to render diagram: {errorObj.message}</p>
+    </div>
+  {/snippet}
+</Mermaid>
+```
+
+## Development
+
+```bash
+# Clone the repository
+git clone https://github.com/friendofsvelte/mermaid.git
+cd mermaid
+
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
 
-# or start the server and open the app in a new browser tab
-npm run dev -- --open
-```
+# Run tests
+npm run test
 
-Everything inside `src/lib` is part of your library, everything inside `src/routes` can be used as a showcase or preview app.
-
-## Building
-
-To build your library:
-
-```sh
-npm pack
-```
-
-To create a production version of your showcase app:
-
-```sh
+# Build library
 npm run build
 ```
 
-You can preview the production build with `npm run preview`.
+## Contributing
 
-> To deploy your app, you may need to install an [adapter](https://svelte.dev/docs/kit/adapters) for your target environment.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Publishing
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add some amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
 
-Go into the `package.json` and give your package the desired name through the `"name"` option. Also consider adding a `"license"` field and point it to a `LICENSE` file which you can create from a template (one popular option is the [MIT license](https://opensource.org/license/mit/)).
+## License
 
-To publish your library to [npm](https://www.npmjs.com):
+MIT © [Friend of Svelte](https://github.com/friendofsvelte)
 
-```sh
-npm publish
-```
+## Links
+
+- [Documentation](https://github.com/friendofsvelte/mermaid)
+- [Examples](https://github.com/friendofsvelte/mermaid/tree/main/src/routes/test)
+- [Issues](https://github.com/friendofsvelte/mermaid/issues)
+- [Mermaid.js Documentation](https://mermaid.js.org/)
+- [Svelte](https://svelte.dev/)
+
+---
+
+Built with ❤️ for the Svelte community.

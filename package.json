@@ -1,6 +1,6 @@
 {
 	"name": "@friendofsvelte/mermaid",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/friendofsvelte/mermaid.git"
@@ -14,7 +14,8 @@
 	},
 	"scripts": {
 		"dev": "vite dev",
-		"build": "vite build && npm run prepack",
+		"build": "vite build",
+		"build:lib": "vite build && npm run prepack",
 		"preview": "vite preview",
 		"prepare": "svelte-kit sync || echo ''",
 		"prepack": "svelte-kit sync && svelte-package && publint",
@@ -43,6 +44,7 @@
 		}
 	},
 	"dependencies": {
+		"@sveltejs/adapter-auto": "^6.1.0",
 		"mermaid": "^10.9.1"
 	},
 	"peerDependencies": {
@@ -52,7 +54,7 @@
 		"@eslint/compat": "^1.2.5",
 		"@eslint/js": "^9.18.0",
 		"@playwright/test": "^1.49.1",
-		"@sveltejs/adapter-auto": "^6.0.0",
+		"@sveltejs/adapter-static": "^3.0.9",
 		"@sveltejs/kit": "^2.22.0",
 		"@sveltejs/package": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^6.0.0",
