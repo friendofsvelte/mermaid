@@ -40,7 +40,7 @@ test('Route 2: Sequence Diagram with Configuration', async ({ page }) => {
 });
 
 test('Route 2: Dark Theme Configuration Validation', async ({ page }) => {
-	await page.goto('/test/2');
+	await page.goto('/test/sequence');
 	await page.waitForSelector('svg', { timeout: 10000 });
 	
 	const svg = page.locator('svg');
@@ -65,7 +65,7 @@ test('Route 2: Dark Theme Configuration Validation', async ({ page }) => {
 });
 
 test('Route 2: Sequence Diagram Interaction Messages', async ({ page }) => {
-	await page.goto('/test/2');
+	await page.goto('/test/sequence');
 	await page.waitForSelector('svg', { timeout: 10000 });
 	
 	// Verify all expected messages are present
@@ -96,7 +96,7 @@ test('Route 2: Performance and Accessibility', async ({ page }) => {
 	// Test performance
 	const startTime = Date.now();
 	
-	await page.goto('/test/2');
+	await page.goto('/test/sequence');
 	await page.waitForSelector('svg', { timeout: 10000 });
 	
 	const renderTime = Date.now() - startTime;
