@@ -1,1 +1,82 @@
+@import 'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap';
+
 @import 'tailwindcss';
+
+/* Global styles */
+html {
+	scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Inter', system-ui, sans-serif;
+	line-height: 1.6;
+}
+
+/* Mermaid diagram responsive styles */
+.mermaid {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.mermaid svg {
+	max-width: 100%;
+	height: auto;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+	width: 8px;
+}
+
+::-webkit-scrollbar-track {
+	background: #f1f5f9;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #cbd5e1;
+	border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #94a3b8;
+}
+
+/* Code block syntax highlighting */
+code[class*="language-"] {
+	font-family: 'Fira Code', 'Monaco', 'Cascadia Code', 'Roboto Mono', monospace;
+	font-size: 0.875rem;
+	line-height: 1.5;
+}
+
+/* Focus styles for accessibility */
+button:focus-visible,
+a:focus-visible {
+	outline: 2px solid #3b82f6;
+	outline-offset: 2px;
+}
+
+/* Animation utilities */
+.animate-fade-in {
+	animation: fadeIn 0.5s ease-in-out;
+}
+
+.animate-slide-up {
+	animation: slideUp 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
+
+@keyframes slideUp {
+	from { 
+		transform: translateY(20px); 
+		opacity: 0; 
+	}
+	to { 
+		transform: translateY(0); 
+		opacity: 1; 
+	}
+}
