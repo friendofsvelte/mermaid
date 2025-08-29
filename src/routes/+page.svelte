@@ -132,7 +132,7 @@
 			</div>
 
 			<div class="max-w-4xl mx-auto">
-				<div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-200">
+				<div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-200 h-[110.961px]">
 					<Mermaid string={heroMermaid} />
 				</div>
 			</div>
