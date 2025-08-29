@@ -1,6 +1,17 @@
 {
 	"name": "@friendofsvelte/mermaid",
 	"version": "0.0.1",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/friendofsvelte/mermaid.git"
+	},
+	"homepage": "https://github.com/friendofsvelte/mermaid",
+	"bugs": {
+		"url": "https://github.com/friendofsvelte/mermaid/issues"
+	},
+	"publishConfig": {
+		"access": "public"
+	},
 	"scripts": {
 		"dev": "vite dev",
 		"build": "vite build && npm run prepack",
