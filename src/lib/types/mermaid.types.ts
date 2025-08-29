@@ -1,54 +1,8 @@
 import type { Snippet } from "svelte";
+import type { MermaidConfig } from "mermaid";
 
-/**
- * Mermaid component configuration types
- */
-export interface MermaidConfig {
-	/** Theme configuration */
-	theme?: 'default' | 'dark' | 'forest' | 'neutral' | 'base';
-	/** Start on load configuration */
-	startOnLoad?: boolean;
-	/** Flowchart configuration */
-	flowchart?: {
-		/** Use max width */
-		useMaxWidth?: boolean;
-		/** HTML labels */
-		htmlLabels?: boolean;
-		/** Curve style */
-		curve?: 'basis' | 'linear' | 'cardinal';
-	};
-	/** Sequence diagram configuration */
-	sequence?: {
-		/** Diagram margins */
-		diagramMarginX?: number;
-		diagramMarginY?: number;
-		/** Actor margin */
-		actorMargin?: number;
-		/** Box margin */
-		boxMargin?: number;
-		/** Box text margin */
-		boxTextMargin?: number;
-		/** Note margin */
-		noteMargin?: number;
-		/** Message margin */
-		messageMargin?: number;
-	};
-	/** Gantt configuration */
-	gantt?: {
-		/** Left padding */
-		leftPadding?: number;
-		/** Grid line start padding */
-		gridLineStartPadding?: number;
-		/** Font size */
-		fontSize?: number;
-		/** Font family */
-		fontFamily?: string;
-		/** Section font size */
-		sectionFontSize?: number;
-		/** Number section styles */
-		numberSectionStyles?: number;
-	};
-}
+// Re-export MermaidConfig for convenience
+export type { MermaidConfig };
 
 /**
  * Mermaid render options
