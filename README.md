@@ -112,12 +112,11 @@ interface MermaidError {
   import { Mermaid } from '@friendofsvelte/mermaid';
   
   const customConfig = {
-    theme: 'base',
-    themeVariables: {
-      primaryColor: '#ff6b6b',
-      primaryTextColor: '#fff',
-      primaryBorderColor: '#ff5252',
-      lineColor: '#333'
+    theme: 'dark',
+    flowchart: {
+      useMaxWidth: true,
+      htmlLabels: true,
+      curve: 'basis'
     }
   };
 </script>

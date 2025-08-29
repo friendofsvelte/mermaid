@@ -155,16 +155,13 @@ export const diagramExamples: DiagramExample[] = [
 export const hackTips = [
 	{
 		title: 'Theme Customization',
-		description: 'Create custom themes for consistent branding',
+		description: 'Use built-in themes for consistent styling',
 		code: `const customConfig: MermaidConfig = {
-  theme: 'base',
-  themeVariables: {
-    primaryColor: '#ff6b6b',
-    primaryTextColor: '#fff',
-    primaryBorderColor: '#ff5252',
-    lineColor: '#333',
-    sectionBkgColor: '#f8f9fa',
-    altSectionBkgColor: '#e9ecef'
+  theme: 'dark',
+  flowchart: {
+    useMaxWidth: true,
+    htmlLabels: true,
+    curve: 'basis'
   }
 };`
 	},

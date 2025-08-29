@@ -24,11 +24,7 @@
 	<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 		<div class="flex items-center justify-between h-16">
 			<div class="flex items-center space-x-2">
-				<div class="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center">
-					<svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 20 20">
-						<path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zm0 4a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path>
-					</svg>
-				</div>
+				<img src="/favicon.png" alt="Mermaid JS Svelte Logo" class="w-8 h-8" />
 				<span class="text-xl font-bold text-gray-900">Mermaid Svelte</span>
 			</div>
 
