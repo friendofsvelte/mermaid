@@ -54,6 +54,12 @@
 
 	let activeSection = $state('hero');
 
+	// Randomly select 4 examples from diagramExamples
+	const randomExamples = $derived.by(() => {
+		const shuffled = [...diagramExamples].sort(() => Math.random() - 0.5);
+		return shuffled.slice(0, 4);
+	});
+
 	const heroMermaid = `graph LR
     A[📝 Write Diagram] --> B[🎨 Render Beautiful]
     B --> C[📱 Display Anywhere]
@@ -161,7 +167,7 @@
 			</div>
 
 			<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
-				{#each diagramExamples.slice(0, 4) as example}
+				{#each randomExamples as example}
 					<ExampleCard
 						title={example.title}
 						description={example.description}

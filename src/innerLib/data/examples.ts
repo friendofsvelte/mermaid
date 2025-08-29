@@ -129,26 +129,17 @@ export const diagramExamples: DiagramExample[] = [
     }`
 	},
 	{
-		id: 'git-workflow',
-		title: 'Git Branching Strategy',
-		description: 'Git flow visualization for development workflow',
-		category: 'gitgraph',
-		difficulty: 'intermediate',
-		useCase: 'Development workflow, team collaboration',
-		code: `gitgraph
-    commit id: "Initial"
-    branch develop
-    checkout develop
-    commit id: "Setup"
-    branch feature/auth
-    checkout feature/auth
-    commit id: "Add login"
-    commit id: "Add signup"
-    checkout develop
-    merge feature/auth
-    checkout main
-    merge develop
-    commit id: "Release v1.0"`
+		id: 'market-share-pie',
+		title: 'Market Share Analysis',
+		description: 'Pie chart showing market distribution across segments',
+		category: 'pie',
+		difficulty: 'beginner',
+		useCase: 'Business reporting, data visualization',
+		code: `pie title Market Share by Platform
+    "Mobile Apps" : 45
+    "Web Apps" : 30
+    "Desktop Apps" : 15
+    "IoT Devices" : 10`
 	}
 ];
 
