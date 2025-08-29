@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 
 test('Route 2: Sequence Diagram with Configuration', async ({ page }) => {
-	// Navigate to test case 2
-	await page.goto('/test/2');
+	// Navigate to sequence test case
+	await page.goto('/test/sequence');
 	
 	// Wait for the sequence diagram to render
 	await page.waitForSelector('svg', { timeout: 10000 });

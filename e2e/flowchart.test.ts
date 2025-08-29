@@ -1,8 +1,8 @@
 import { expect, test } from '@playwright/test';
 
 test('Route 1: Simple Flowchart Accuracy', async ({ page }) => {
-	// Navigate to test case 1
-	await page.goto('/test/1');
+	// Navigate to flowchart test case
+	await page.goto('/test/flowchart');
 	
 	// Wait for the mermaid diagram to render
 	await page.waitForSelector('svg', { timeout: 10000 });
@@ -38,7 +38,7 @@ test('Route 1: Simple Flowchart Accuracy', async ({ page }) => {
 });
 
 test('Route 1: Flowchart Structure Validation', async ({ page }) => {
-	await page.goto('/test/1');
+	await page.goto('/test/flowchart');
 	await page.waitForSelector('svg', { timeout: 10000 });
 	
 	const svg = page.locator('svg');
@@ -65,7 +65,7 @@ test('Route 1: Flowchart Structure Validation', async ({ page }) => {
 test('Route 1: Responsive Behavior', async ({ page }) => {
 	// Test desktop view
 	await page.setViewportSize({ width: 1200, height: 800 });
-	await page.goto('/test/1');
+	await page.goto('/test/flowchart');
 	await page.waitForSelector('svg');
 	
 	const desktopSvg = page.locator('svg');
