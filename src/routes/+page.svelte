@@ -117,7 +117,7 @@
 						Get Started
 					</button>
 					<a 
-						href="/test/flowchart" 
+						href="/examples" 
 						class="px-8 py-3 border border-gray-300 hover:border-gray-400 text-gray-700 font-semibold rounded-lg transition-colors"
 					>
 						View Examples
@@ -173,7 +173,7 @@
 
 			<div class="text-center mt-12">
 				<a 
-					href="/test/flowchart"
+					href="/examples"
 					class="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-semibold rounded-lg transition-colors"
 				>
 					View All Examples

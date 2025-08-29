@@ -45,7 +45,7 @@
 
 			<div class="flex items-center space-x-4">
 				<a
-					href="/test/flowchart"
+					href="/examples"
 					class="text-sm text-gray-600 hover:text-gray-900 transition-colors"
 				>
 					Examples
