@@ -9,13 +9,7 @@ const config = {
 
 	kit: {
 		// Static adapter configuration for Cloudflare Pages
-		adapter: adapter({
-			pages: 'build',
-			assets: 'build',
-			fallback: undefined,
-			precompress: false,
-			strict: true
-		}),
+		adapter: adapter(),
 		alias: {
 			$innerLib: './src/innerLib'
 		}
