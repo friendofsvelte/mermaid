@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { Mermaid } from '$lib/index.js';
-	import type { MermaidConfig } from '$lib/index.js';
 	import Navigation from '$innerLib/components/Navigation.svelte';
 	import FeatureGrid from '$innerLib/components/FeatureGrid.svelte';
 	import ExampleCard from '$innerLib/components/ExampleCard.svelte';
