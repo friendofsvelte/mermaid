@@ -133,7 +133,13 @@
 
 			<div class="max-w-4xl mx-auto">
 				<div class="bg-white rounded-2xl shadow-xl p-8 border border-gray-200 h-[110.961px]">
-					<Mermaid string={heroMermaid} />
+					<Mermaid string={heroMermaid}>
+						{#snippet error(errorObj)}
+							<div class="error-message">
+								<p>Failed to render diagram: {errorObj.message}</p>
+							</div>
+						{/snippet}
+					</Mermaid>
 				</div>
 			</div>
 		</div>

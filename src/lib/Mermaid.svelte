@@ -103,7 +103,8 @@
 </script>
 
 <div bind:this={containerElement} class={className}>
-	{#if errorObj && error}
-		{@render error(errorObj)}
-	{/if}
 </div>
+
+{#if errorObj && error}
+	{@render error(errorObj)}
+{/if}
